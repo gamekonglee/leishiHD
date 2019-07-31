@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bc.otlhd.com.ui.view.BottomBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x60"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    >
+    <!--首页-->
+
+    <LinearLayout
+        android:id="@+id/frag_top_ll_home"
+        style="@style/bottom_ll_style" >
+
+
+        <TextView
+            android:id="@+id/frag_top_tv_home"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top_home" />
+    </LinearLayout>
+    <!--首页-->
+
+    <LinearLayout
+        android:id="@+id/frag_top_ll_hot"
+        style="@style/bottom_ll_style"
+        >
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <TextView
+               android:layout_centerInParent="true"
+               android:id="@+id/frag_top_tv_hot"
+               style="@style/bottom_text_style"
+               android:layout_marginTop="0dp"
+               android:text="热卖" />
+           <ImageView
+               android:background="@mipmap/icon_hot"
+                android:layout_toRightOf="@+id/frag_top_tv_hot"
+               android:layout_above="@+id/frag_top_tv_hot"
+               android:layout_width="@dimen/x28"
+               android:layout_height="@dimen/x13" />
+       </RelativeLayout> 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frag_top_ll_stlye"
+        style="@style/bottom_ll_style" >
+
+
+        <TextView
+            android:id="@+id/frag_top_tv_stlye"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top_stlye" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/frag_top_ll_type"
+        style="@style/bottom_ll_style" >
+        <TextView
+            android:id="@+id/frag_top_tv_type"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top_type" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/frag_top_ll_space"
+        style="@style/bottom_ll_style" >
+        <TextView
+            android:id="@+id/frag_top_tv_space"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top_space" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/frag_top_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_top_iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:src="@drawable/top_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_top_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frag_goods_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_goods_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:src="@drawable/goods_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_goods_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_goods" />
+    </LinearLayout>
+
+    <!--产品-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frag_product_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_product_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:src="@drawable/product_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_product_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_product" />
+    </LinearLayout>
+    <!--配灯-->
+    <LinearLayout
+        android:id="@+id/frag_match_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_match_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:src="@drawable/match_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_match_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_match" />
+    </LinearLayout>
+    <!--购物车-->
+    <RelativeLayout
+        android:id="@+id/frag_cart_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_cart_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/cart_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_cart_tv"
+            style="@style/bottom_text_style"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/frag_cart_iv"
+            android:text="@string/frag_cart" />
+
+        <TextView
+            android:id="@+id/unMessageReadTv"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:visibility="gone"
+            android:background="@drawable/bg_unread_count_shape"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:layout_marginRight="@dimen/x7"
+            android:layout_marginTop="@dimen/x3"
+            />
+    </RelativeLayout>
+    <!--我的-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frag_mine_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_mine_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:src="@drawable/mine_bot_bar" />
+
+        <TextView
+            android:id="@+id/frag_mine_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_mine" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/frag_tmall_ll"
+        style="@style/bottom_ll_style" >
+
+        <ImageView
+            android:id="@+id/frag_tmall_iv"
+            android:layout_width="45dp"
+            android:visibility="gone"
+            android:layout_height="45dp"
+            android:src="@drawable/top_tmall_bar" />
+
+        <TextView
+            android:id="@+id/frag_tmall_tv"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_tmall" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/frag_top_ll_setting"
+        style="@style/bottom_ll_style" >
+        <TextView
+            android:id="@+id/frag_top_tv_setting"
+            style="@style/bottom_text_style"
+            android:text="@string/frag_top_setting" />
+    </LinearLayout>
+</bc.otlhd.com.ui.view.BottomBar>

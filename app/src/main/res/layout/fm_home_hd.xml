@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <View
+        android:id="@+id/view"
+        style="@style/view_style"
+        />
+    <FrameLayout
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.baiiu.filter.DropDownMenu
+            android:id="@+id/dropDownMenu"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.lib.common.hxp.view.PullToRefreshLayout
+                android:id="@+id/mFilterContentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/refresh_head" />
+                <!-- 支持所有实现Pullable接口的View -->
+
+                <com.lib.common.hxp.view.PullableGridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="4"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:scrollbars="none"
+                    android:background="@android:color/transparent"
+
+                    />
+
+                <include layout="@layout/load_more" />
+
+            </com.lib.common.hxp.view.PullToRefreshLayout>
+        </com.baiiu.filter.DropDownMenu>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/competitive_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="精品"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/new_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="新品"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/hot_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="热销"/>
+
+        </LinearLayout>
+        <ProgressBar
+        android:id="@+id/pd"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible" />
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/top_iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/go_top"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:visibility="visible"
+        />
+</RelativeLayout>

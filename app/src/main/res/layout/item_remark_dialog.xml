@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/x90"
+    android:layout_height="match_parent">
+<TextView
+    android:id="@+id/tv_location"
+    android:text="卧室"
+    android:textSize="@dimen/x13"
+    android:textColor="#333333"
+    android:gravity="center"
+    android:lines="1"
+    android:paddingTop="@dimen/x10"
+    android:paddingBottom="@dimen/x10"
+    android:background="@drawable/bg_corner_dddddd_5"
+    android:layout_width="@dimen/x90"
+    android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/rl_brand"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/webview"
+        android:layout_marginRight="@dimen/x80"
+        android:layout_marginLeft="@dimen/x80"
+        android:layout_marginTop="@dimen/x80"
+        android:layout_marginBottom="@dimen/x50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </WebView>
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/banner"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/x50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x350"/>
+        <LinearLayout
+            android:id="@+id/ll_video"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/x50"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:text="VIDEO CENTER"
+                android:textColor="@color/colorPrimaryGreen2"
+                android:textSize="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="视频中心"
+                android:layout_marginTop="@dimen/x15"
+                android:textColor="@color/colorPrimaryGreen2"
+                android:textSize="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <GridView
+                android:id="@+id/gv_video"
+                android:numColumns="3"
+                android:visibility="gone"
+                android:horizontalSpacing="@dimen/x15"
+                android:verticalSpacing="@dimen/x15"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/x15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:background="#dddddd"
+            android:layout_width="@dimen/x132"
+            android:layout_height="match_parent"
+            >
+        <ImageView
+            android:layout_centerInParent="true"
+            android:background="@mipmap/logo_img"
+            android:layout_width="@dimen/x47"
+            android:layout_height="@dimen/x17" />
+        </RelativeLayout>
+   <GridView
+       android:id="@+id/gv_brand_bottom"
+       android:numColumns="7"
+       android:horizontalSpacing="@dimen/x1"
+       android:layout_width="0dp"
+       android:background="#ffffff"
+       android:layout_height="match_parent"
+       android:layout_weight="1"/>
+        <RelativeLayout
+            android:layout_width="@dimen/x132"
+            android:background="#dddddd"
+            android:onClick="goBack"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x1"
+            >
+            <ImageView
+                android:background="@mipmap/icon_brand_back"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

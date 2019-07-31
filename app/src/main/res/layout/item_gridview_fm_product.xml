@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/x10"
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:id="@+id/imageViewRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f3f3f3"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#f3f3f3"
+            android:src="@drawable/bg_default"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewRl"
+        android:layout_centerHorizontal="true"
+        android:text="MS5263电灯泡"
+        android:textColor="@color/fontColor2"
+        android:layout_marginTop="@dimen/x10"
+        android:textSize="@dimen/x13" />
+    <TextView
+        android:id="@+id/old_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_centerHorizontal="true"
+        android:text="￥35"
+        android:visibility="gone"
+        android:textColor="@color/fontColor2"
+        android:textSize="@dimen/x20" />
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/old_price_tv"
+        android:layout_centerHorizontal="true"
+        android:text="￥30"
+        android:textColor="@color/red"
+        android:textSize="@dimen/x14"
+        android:layout_marginBottom="@dimen/x5"/>
+    <ImageView
+        android:id="@+id/iv_is_on_sale"
+        android:visibility="invisible"
+        android:background="@mipmap/icon_is_on_sale"
+        android:layout_margin="5dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+</RelativeLayout>

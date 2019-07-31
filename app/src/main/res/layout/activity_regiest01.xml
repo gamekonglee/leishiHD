@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_color"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimaryRed"
+            android:minHeight="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:onClick="goBack">
+                    <ImageView
+                        android:id="@+id/topLeftBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/goback"
+
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/regiest_code"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="4dip"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/find_pwd_txtNewPwd"
+            style="@style/txtDefaultStyle"
+            android:layout_width="90dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:textSize="20dp"
+            android:text="@string/Invitation_code02"/>
+
+        <EditText
+            android:id="@+id/invitation_code"
+            style="@style/editloginStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/find_pwd_txtNewPwd"
+            android:background="@null"
+            android:textSize="20dp"
+            android:digits="@string/digits_password"
+            android:hint="@string/him_invite_code"
+            />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/find_pwd_btnConfirm"
+        style="@style/btnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dp"
+        android:text="@string/next"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+</LinearLayout>

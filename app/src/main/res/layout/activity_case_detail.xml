@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_case"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x45"
+    android:background="@color/theme_dark_top">
+    <ImageView
+        android:layout_marginLeft="@dimen/x30"
+        android:onClick="goBack"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/nav_icon_back"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/x20" />
+    <TextView
+        android:text="案例展示"
+        style="@style/tv_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_share"-->
+        <!--android:background=""-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/x30"-->
+        <!--android:layout_width="@dimen/x21"-->
+        <!--android:layout_height="@dimen/x20" />-->
+</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_marginTop="@dimen/x45"
+            android:text="THE  CASE  SHOWS"
+            android:textSize="@dimen/x30"
+            android:visibility="gone"
+            android:textColor="#881d4f36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/x10"
+            android:text="案例展示"
+            android:textSize="@dimen/x20"
+            android:textColor="#881d4f36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_marginTop="@dimen/x36"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_width="@dimen/x744"
+            android:layout_height="@dimen/x417" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:text=""
+            android:layout_marginBottom="@dimen/x30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+<ImageView
+    android:id="@+id/iv_left"
+android:background="@mipmap/icon_left_new"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="@dimen/x30"
+android:layout_width="@dimen/x45"
+android:layout_height="@dimen/x45"  />
+    <ImageView
+        android:id="@+id/iv_right"
+        android:background="@mipmap/icon_right_new"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/x45"
+        android:layout_height="@dimen/x45"  />
+</RelativeLayout>

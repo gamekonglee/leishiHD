@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="@dimen/x220"
+              android:layout_height="@dimen/x40"
+    android:padding="@dimen/x5"
+    android:gravity="center"
+              android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="品牌:   品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:  品牌:   "
+            android:ellipsize="end"
+            android:textSize="11sp"
+            android:textColor="@color/txt_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            android:text="品牌:   品牌:  品牌:  品牌:   "
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="11sp"
+            android:textColor="@color/txt_black"/>
+        <TextView
+            android:id="@+id/value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="奥科特"
+            android:textSize="12sp"
+            android:textColor="@color/txt_black"
+            android:layout_weight="1"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</LinearLayout>

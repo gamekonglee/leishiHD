@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="#ffffff"
+              android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/colorPrimaryGreen2"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_ll"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:onClick="goBack">
+                <ImageView
+                    android:id="@+id/topLeftBtn"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/nav_icon_back"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x16"
+                android:layout_centerInParent="true"
+                android:text="@string/frag_cart"
+                />
+
+            <TextView
+                android:id="@+id/edit_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:textSize="@dimen/x16"
+                android:textColor="#ffffff"
+                android:text="编辑"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--第一次没有数据时显示空-->
+
+            <include layout="@layout/common_error" />
+            <include
+                android:id="@+id/null_net"
+                layout="@layout/empty_page_no_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+
+                />
+
+            <include
+                android:id="@+id/null_view"
+                layout="@layout/empty_page_no_recoder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+
+            <ScrollView
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_weight="1.0"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/x20"
+                    android:background="#ffffff"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20">
+
+                    <!--<ListView
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />-->
+                    <com.yjn.swipelistview.swipelistviewlibrary.widget.SwipeMenuListView
+                        android:id="@+id/cart_lv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#ffffff"
+                        android:dividerHeight="@dimen/x20" />
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+        <!--<ProgressBar-->
+            <!--android:id="@+id/pd"-->
+            <!--style="@style/Base.Widget.AppCompat.ProgressBar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:visibility="invisible" />-->
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:focusable ="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical">
+        <CheckBox
+
+            android:id="@+id/checkAll"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_centerVertical="true"
+            android:button="@drawable/cb_cart"
+            android:background="@null"
+            android:textSize="@dimen/x18"
+            android:textColor="#333333"
+            android:text="    共选0件商品" />
+        <TextView
+            android:id="@+id/tv_delete"
+            android:text="删除"
+            android:textColor="#333333"
+            android:textSize="@dimen/x18"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_toRightOf="@+id/checkAll"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_corner_999999_5"
+            android:gravity="center"
+            android:layout_width="@dimen/x65"
+            android:layout_height="@dimen/x32" />
+        <TextView
+            android:id="@+id/settle_tv"
+            android:layout_width="@dimen/x105"
+            android:layout_height="@dimen/x32"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/theme_corner_2"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="生成订单"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x18" />
+
+        <LinearLayout
+            android:id="@+id/sum_ll"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/settle_tv"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/sumNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/x18"
+                android:text="合计:"/>
+            <TextView
+                android:id="@+id/money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="￥0"
+                android:textSize="@dimen/x18"
+                android:focusable="false"
+                android:textColor="@color/red"/>
+            <LinearLayout
+                android:id="@+id/agiolv"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/sumAgioTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:background="@drawable/number_input_et_bg"
+                    android:maxLength="2"
+                    android:hint=".." />
+
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="%"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/web_rl"
+        android:layout_width="1100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="1000dp"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:scrollbarSize="0dip"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollbarSize="0dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ico_close"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>

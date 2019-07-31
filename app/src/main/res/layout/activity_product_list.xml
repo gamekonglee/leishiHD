@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gaga="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:background="#15242e">
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_centerVertical="true"
+                android:onClick="goBack"
+                android:layout_marginLeft="@dimen/x30"
+                android:background="@mipmap/nav_icon_back" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/x28"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_product_search">
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:background="@mipmap/icon_search" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x15"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/him_product"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_toLeftOf="@+id/cart_Ll"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_width="@dimen/x140"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/x30">
+                <TextView
+                    android:id="@+id/tv_on_sale"
+                    android:text="已上架"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/bg_corner_green_5_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv_not_sale"
+                    android:text="已下架"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/bg_corner_green_5_right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/cart_Ll"
+                android:layout_width="@dimen/x40"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x35"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/x19"
+                    android:layout_height="@dimen/x19"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/nav_icon_shop" />
+                <TextView
+                    android:id="@+id/unMessageReadTv"
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:visibility="invisible"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x13"
+                    android:layout_marginTop="@dimen/x8"
+                    android:background="@drawable/bg_unread_count_shape"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"
+                    />
+                <!--android:background="@drawable/bg_unread_count"-->
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <astuetz.MyPagerSlidingTabStrip
+                android:background="@color/white"
+                gaga:pstsIndicatorColor="#e9642b"
+                gaga:pstsTextViewSize="14dip"
+                android:layout_gravity="center"
+                gaga:pstsDividerColor="@color/white"
+                gaga:pstsSelectTextViewSize="14dip"
+                gaga:pstsTextViewColor="@color/fontColor3"
+                gaga:pstsSelectTextViewColor="#e9642b"
+                android:id="@+id/tab_strip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vPager"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+            <View
+                android:layout_alignParentBottom="true"
+                android:background="#eeeeee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x90"
+        android:layout_marginBottom="@dimen/x50">
+        <bc.otlhd.com.ui.view.PMSwipeRefreshLayout
+            android:id="@+id/mFilterContentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<include layout="@layout/refresh_head" />-->
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <bc.otlhd.com.ui.view.EndOfGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="5"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:scrollbars="none"
+                android:horizontalSpacing="@dimen/x15"
+                android:verticalSpacing="@dimen/x15"
+                android:background="#ffffff"
+
+                />
+
+            <!--<include layout="@layout/load_more" />-->
+
+        </bc.otlhd.com.ui.view.PMSwipeRefreshLayout>
+        <ProgressBar
+            android:id="@+id/pd"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible" />
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginBottom="@dimen/x90"
+            android:layout_gravity="right|bottom"
+            android:background="@mipmap/icon_fhdb"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50" />
+        <ImageView
+            android:onClick="goBack"
+            android:background="@mipmap/icon_return"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/x30"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50">
+        <View
+            android:background="#dddddd"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <bc.otlhd.com.ui.view.TextViewPlus
+                android:id="@+id/tv_hot"
+                android:drawableTop="@mipmap/tab_icon_recommended_selected"
+                app:top_width="@dimen/x19"
+                app:top_height="@dimen/x19"
+                android:text="推荐"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/colorPrimaryGreen2"
+                android:drawablePadding="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <bc.otlhd.com.ui.view.TextViewPlus
+                android:id="@+id/tv_brand"
+                android:drawableTop="@mipmap/tab_icon_brand_default"
+                app:top_width="@dimen/x16"
+                app:top_height="@dimen/x19"
+                android:text="品牌"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/color_555555"
+                android:layout_marginLeft="@dimen/x80"
+                android:drawablePadding="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <bc.otlhd.com.ui.view.TextViewPlus
+                android:id="@+id/tv_style"
+                android:drawableTop="@mipmap/tab_icon_style_default"
+                app:top_width="@dimen/x16"
+                app:top_height="@dimen/x19"
+                android:text="风格"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/color_555555"
+                android:layout_marginLeft="@dimen/x80"
+                android:drawablePadding="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <bc.otlhd.com.ui.view.TextViewPlus
+                android:id="@+id/tv_type"
+                android:drawableTop="@mipmap/tab_icon_type_default"
+                app:top_width="@dimen/x19"
+                app:top_height="@dimen/x19"
+                android:text="类型"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/color_555555"
+                android:layout_marginLeft="@dimen/x80"
+                android:drawablePadding="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <bc.otlhd.com.ui.view.TextViewPlus
+                android:id="@+id/tv_space"
+                android:drawableTop="@mipmap/tab_icon_space_default"
+                app:top_width="@dimen/x19"
+                app:top_height="@dimen/x19"
+                android:text="空间"
+                android:textSize="@dimen/x11"
+                android:textColor="@color/color_555555"
+                android:layout_marginLeft="@dimen/x80"
+                android:drawablePadding="@dimen/x4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

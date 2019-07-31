@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#303030</color>
+    <color name="colorPrimary">#242424</color>
+    <color name="colorAccent">#303030</color>
+    <color name="green">#6fbe2f</color>
+    <color name="yellow">#F0AC41</color>
+    <color name="txt_black">#454545</color>
+    <color name="divider_gray">#AAacacac</color>
+    <color name="colorPrimaryRed">#ca0a00</color>
+    <color name="fontColor2">#333333</color>
+    <color name="fontColor6">#666666</color>
+    <color name="fontColor60">#605f5f</color>
+    <color name="colorview">#efefef</color>
+    <color name="device_line">#bebcbc</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_color">#F0EFF5</color>
+    <color name="fontColora">#aaaaaa</color>
+    <color name="fontColor3">#333333</color>
+    <color name="fontColorEO">#d1d1d2</color>
+    <color name="red">#f62e48</color>
+    <color name="divider_color">#d4d5d6</color>
+    <color name="whiteSmoke">#f3f3f3</color><!-- 白烟-->
+    <color name="ed_f8">#F8D6A0</color>
+    <color name="EC">#ECECEC</color>
+    <color name="font_color1">#666666</color>
+    <color name="line">#e6e6e6</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="trantracent">#22000000</color>
+    <color name="trantracent_wode">#55000000</color>
+    <color name="deep_transparent">#bb000000</color>
+    <color name="deep_transparentDD">#DD000000</color>
+    <color name="grey_text_color_normal">#8A8A8A</color>
+    <color name="grey_line_bg">#E4E4E4</color>
+    <color name="original_border_color">#F18459</color>
+    <color name="grey_normal_bg">#EEEEEE</color>
+    <color name="comment_divider">#cccccc</color>
+    <color name="colorPrimaryGreen">#006733</color>
+    <color name="txt_black_333333">#333333</color>
+    <color name="leishilv">#00533a</color>
+    <color name="colorPrimaryGreen2">#1d4f36</color>
+    <color name="bg_brand_item_selected">#f3f3f3</color>
+    <color name="bg_brand_item_normal">#dddddd</color>
+    <color name="goods_details_sku">#efefef</color>
+    <color name="color_555555">#555555</color>
+    <color name="theme_dark_top">#15242e</color>
+    <color name="color_333333">#333333</color>
+
+
+</resources>

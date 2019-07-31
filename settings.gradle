@@ -1,0 +1,1 @@
+include ':app', ':common', ':swipelistviewlibrary', ':SlidingTabLayout', ':filter-lib'

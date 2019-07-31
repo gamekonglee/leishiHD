@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/theme_dark_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45">
+        <RelativeLayout
+            android:layout_width="@dimen/x50"
+            android:layout_height="match_parent"
+            android:onClick="goBack">
+            <ImageView
+                android:background="@mipmap/nav_icon_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="标题"
+        android:textSize="@dimen/x15"
+        android:textColor="#333333"
+        android:layout_margin="@dimen/x30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_margin="@dimen/x30"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/webview_content"
+        android:textColor="#666666"
+        android:textSize="@dimen/x14"
+        android:lineSpacingExtra="5dp"
+        android:layout_margin="@dimen/x30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

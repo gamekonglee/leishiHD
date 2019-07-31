@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x150"
+    android:padding="@dimen/x10"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_marginLeft="@dimen/x50"
+        android:src="@drawable/bg_default"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <bc.otlhd.com.ui.view.TextViewPlus
+            android:id="@+id/title"
+            android:text=""
+            android:textColor="#444444"
+            android:textSize="20sp"
+            android:layout_marginRight="15dp"
+            app:right_width="10dp"
+            app:right_height="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_des"
+            android:textSize="@dimen/x11"
+            android:textColor="#999999"
+            android:layout_marginTop="@dimen/x2"
+            android:lineSpacingExtra="2dp"
+            android:lines="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="@dimen/x11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:background="@mipmap/icon_arrow"
+        android:layout_marginRight="@dimen/x50"
+        android:layout_width="@dimen/x10"
+        android:layout_height="@dimen/x20" />
+
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:id="@+id/main_ll">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/colorPrimaryRed">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_cv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/app_icon"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/head_cv"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="22sp"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/collect_rl"
+                style="@style/mine_item_style02"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/collect_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/collet"/>
+
+                <TextView
+                    android:id="@+id/order_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/collect_iv"
+                    android:text="@string/my_collet"/>
+
+                <ImageView
+                    android:id="@+id/arror_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/view_style"
+                />
+
+            <RelativeLayout
+                android:id="@+id/version_rl"
+                style="@style/mine_item_style02"
+                >
+                <ImageView
+                    android:id="@+id/address_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/address"/>
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/address_iv"
+                    android:text="@string/now_version"/>
+
+                <ImageView
+                    android:id="@+id/arror03_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+                <TextView
+                    android:id="@+id/version_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toLeftOf="@id/arror03_iv"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/blue_4285f4"
+                    android:text="1.0"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/view_style"
+                />
+
+            <RelativeLayout
+                android:id="@+id/clear_cache_rl"
+                style="@style/mine_item_style02"
+                >
+                <ImageView
+                    android:id="@+id/stream_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/clear_cache"/>
+
+                <TextView
+                    android:id="@+id/stream_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/stream_iv"
+                    android:text="@string/cleancache"/>
+
+                <ImageView
+                    android:id="@+id/arror04_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+                <TextView
+                    android:id="@+id/cache_num_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toLeftOf="@id/arror04_iv"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/blue_4285f4"
+                    android:text="20K"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/view_style"
+                />
+
+            <RelativeLayout
+                android:id="@+id/cotact_cutomer_rl"
+                style="@style/mine_item_style02"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/message_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cotact_customer"/>
+
+                <TextView
+                    android:id="@+id/message_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/message_iv"
+                    android:text="@string/cotact_customer"/>
+
+                <ImageView
+                    android:id="@+id/arror05_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <View
+                style="@style/view_style"
+                />
+
+            <RelativeLayout
+                android:id="@+id/set_price_rl"
+                style="@style/mine_item_style02"
+                android:visibility="visible"
+                >
+                <ImageView
+                    android:id="@+id/share_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/out_login"/>
+
+                <TextView
+                    android:id="@+id/share_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/share_iv"
+                    android:text="高级设置"/>
+
+                <ImageView
+                    android:id="@+id/arror06_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <View
+                style="@style/view_style"
+                />
+            <RelativeLayout
+                android:id="@+id/down_data_rl"
+                style="@style/mine_item_style02"
+                android:visibility="visible"
+                >
+                <ImageView
+                    android:id="@+id/down_data_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/down_image"/>
+
+                <TextView
+                    android:id="@+id/down_data_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/down_data_iv"
+                    android:text="下载资源包"/>
+
+                <ImageView
+                    android:id="@+id/arror07_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/image_version_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toLeftOf="@id/arror07_iv"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/colorPrimaryRed"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/qq_rl"
+                style="@style/mine_item_style02"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/qq_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/down_image"/>
+
+                <TextView
+                    android:id="@+id/qq_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toRightOf="@id/qq_iv"
+                    android:text="下载资源包"/>
+
+                <ImageView
+                    android:id="@+id/arror08_iv"
+                    style="@style/mine_image_arrow"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/qqq_tv"
+                    style="@style/mine_text_style"
+                    android:layout_toLeftOf="@id/arror08_iv"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/colorPrimaryRed"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

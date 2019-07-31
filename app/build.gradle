@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.0'
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+    defaultConfig {
+        applicationId "bc.otlhd.com"
+        minSdkVersion 18
+        targetSdkVersion 29
+        versionCode 12
+        versionName "1.1.2"
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a','x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加
+        }
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "c4e985ac3b3156ec8e4cb580", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile(name: 'libraryConvenientBanner', ext: 'aar')
+    compile(name: 'circleimageview-2.0.0', ext: 'aar')
+//    compile 'com.android.support:appcompat-v7:23.0.1'
+//    compile 'com.android.support:recyclerview-v7:23.0.1'
+//    compile 'com.android.support:recyclerview-v7:23.0.1'
+//    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    compile files('libs/universalimageloader.jar')
+    compile files('libs/fastjson-1.0.3.jar')
+    compile project(':common')
+    compile ('com.bigkoo:alertview:1.0.3'){
+        exclude group: 'com.android.support'
+    }
+    compile project(':swipelistviewlibrary')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile ('cn.qqtheme.framework:WheelPicker:latest.release'){
+        exclude group: 'com.android.support'
+    }
+    compile project(':filter-lib')
+    compile files('libs/MobCommons-2016.1201.1839.jar')
+    compile files('libs/MobTools-2016.1201.1839.jar')
+    compile ('me.dm7.barcodescanner:zxing:1.9'){
+        exclude group: 'com.android.support'
+    }
+    compile 'cn.jiguang.sdk:jpush:3.0.3'
+    // 此处以JPush 3.0.3 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.1'
+    // 此处以JCore 1.1.1 版本为例。
+    compile files('libs/eventbus-3.0.0.jar')
+    compile files('libs/alipaySdk-20161009.jar')
+    compile(name: 'SMSSDK-2.1.3', ext: 'aar')
+    compile(name: 'SMSSDKGUI-2.1.3', ext: 'aar')
+    compile 'com.bm.photoview:library:1.4.1'
+    compile files('libs/ShareSDK-SinaWeibo-2.8.2.jar')
+    compile ('com.yanzhenjie.nohttp:okhttp:1.1.1'){
+        exclude group: 'com.android.support'
+    }
+    compile ('com.shuyu:GSYVideoPlayer:1.6.5'){
+        exclude group: 'com.android.support'
+    }
+    compile 'com.pgyersdk:sdk:2.8.0'
+    implementation(name: 'AkHttp', ext: 'aar')
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+    compile  'com.umeng.umsdk:analytics:8.0.0'
+    compile  'com.umeng.umsdk:common:2.0.0'
+//    compile  'com.umeng.umsdk:utdid:1.1.5.3'
+//    compile 'com.android.support:multidex:1.0.3'
+}
