@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
+ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:1-5:12
 	package
-		ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:2:5-47
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:2:5-47
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:11-69
+		ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:1:11-69
 application
-ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml:4:5-20
+ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml:4:5-20
 uses-sdk
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-		ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-		ADDED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
-		INJECTED from /Users/gamekonglee/Downloads/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		ADDED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml
+		INJECTED from /Users/gamekonglee/Downloads/GkleeProject/leishiHD/SlidingTabLayout/AndroidManifest.xml

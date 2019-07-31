@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.qqtheme.framework:Common:1.5.6.20190131@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1fac66b56da2de96564922bb9ec5532a/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1fac66b56da2de96564922bb9ec5532a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1fac66b56da2de96564922bb9ec5532a/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.qqtheme.framework/Common/1.5.6.20190131/dcea77e1713c9428ee195383291985fa2e8ba507/Common-1.5.6.20190131-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
