@@ -80,6 +80,7 @@ public class SetPriceController extends BaseController implements HttpListener, 
     public String filter_attr02;
 
     private List<Goods> mGoodsList;
+    private String mSetprice="0";
 
 
     public SetPriceController(SetPriceActivity v) {
@@ -458,6 +459,55 @@ public class SetPriceController extends BaseController implements HttpListener, 
             final float setPrice=mPriceDao.getProductPrice(goodId+"").getShop_price();
             holder.set_price_bt.setText(setPrice==0?"设置":"￥"+setPrice);
             final int finalGoodId = goodId;
+//            holder.imageView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    final EditText inputServer = new EditText(mView);
+//                    inputServer.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(mView);
+//                    builder.setTitle("设置").setIcon(android.R.drawable.ic_dialog_info).setView(inputServer)
+//                            .setNegativeButton("取消", null);
+//                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            mView.setShowDialog(true);
+//                            mView.setShowDialog("正在处理中..");
+//                            mView.showLoading();
+//                            MyShare.get(UIUtils.getContext()).putBoolean(Constance.SET_PRICE, true);
+////                                                                   MyShare.get(mView).putString(Constance.goods_id+finalGoodId,setPrice+"");
+//                            mSetprice = inputServer.getText().toString();
+//                            mGood= new GoodPrices();
+//                            mGood.setId(finalGoodId);
+//                            oldPrice=setPrice==0?"0":setPrice+"";
+//                            if (AppUtils.isEmpty(mSetprice)) {
+//                                mGood.setShop_price(0);
+//                            } else {
+//                                mGood.setShop_price(Float.parseFloat(mSetprice));
+//                            }
+//
+//                            if (-1 != mPriceDao.replaceOne(mGood)) {
+//                                new Thread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        mGoodPricees = mPriceDao.getAll();
+//                                        mView.runOnUiThread(new Runnable() {
+//                                            @Override
+//                                            public void run() {
+//                                                sendUploadPrice(JSON.toJSONString(mGoodPricees));
+//                                            }
+//                                        });
+//                                    }
+//                                }).start();
+//                                holder.set_price_bt.setText(AppUtils.isEmpty(mSetprice) ? "设置" : "￥" + mSetprice);
+//                            } else {
+//                                Toast.makeText(mView, "设置失败!", Toast.LENGTH_LONG).show();
+//                            }
+//
+//                        }
+//                    });
+//                    builder.show();
+//
+//                }
+//            });
             holder.set_price_bt.setOnClickListener(new View.OnClickListener() {
                                                        @Override
                                                        public void onClick(View v) {
@@ -473,14 +523,14 @@ public class SetPriceController extends BaseController implements HttpListener, 
                                                                    mView.showLoading();
                                                                    MyShare.get(UIUtils.getContext()).putBoolean(Constance.SET_PRICE, true);
 //                                                                   MyShare.get(mView).putString(Constance.goods_id+finalGoodId,setPrice+"");
-                                                                   String price = inputServer.getText().toString();
+                                                                   mSetprice = inputServer.getText().toString();
                                                                    mGood= new GoodPrices();
                                                                    mGood.setId(finalGoodId);
                                                                    oldPrice=setPrice==0?"0":setPrice+"";
-                                                                   if (AppUtils.isEmpty(price)) {
+                                                                   if (AppUtils.isEmpty(mSetprice)) {
                                                                        mGood.setShop_price(0);
                                                                    } else {
-                                                                       mGood.setShop_price(Float.parseFloat(price));
+                                                                       mGood.setShop_price(Float.parseFloat(mSetprice));
                                                                    }
 
                                                                    if (-1 != mPriceDao.replaceOne(mGood)) {
@@ -496,7 +546,7 @@ public class SetPriceController extends BaseController implements HttpListener, 
                                                                                });
                                                                            }
                                                                        }).start();
-                                                                       holder.set_price_bt.setText(AppUtils.isEmpty(price) ? "设置" : "￥" + price);
+                                                                       holder.set_price_bt.setText(AppUtils.isEmpty(mSetprice) ? "设置" : "￥" + mSetprice);
                                                                    } else {
                                                                        Toast.makeText(mView, "设置失败!", Toast.LENGTH_LONG).show();
                                                                    }
@@ -525,6 +575,9 @@ public class SetPriceController extends BaseController implements HttpListener, 
     private GoodPrices mGood;
 
     private void sendUploadPrice(String productPrice){
+//        IssueApplication.mUserInfo=new JSONObject();
+//        IssueApplication.mUserInfo.put(Constance.id,"6");
+
         if(((IssueApplication)mView.getApplication()).mUserInfo==null){
             MyToast.show(mView,"请先连接网络");
             return;
@@ -535,7 +588,7 @@ public class SetPriceController extends BaseController implements HttpListener, 
             @Override
             public void onSuccessListener(int what, JSONObject ans) {
                 mView.hideLoading();
-                mGood.setShop_price(Float.parseFloat(oldPrice));
+                mGood.setShop_price(Float.parseFloat(mSetprice));
                 if (-1 != mPriceDao.replaceOne(mGood)) {
                     mProAdapter.notifyDataSetChanged();
                 }
@@ -543,7 +596,6 @@ public class SetPriceController extends BaseController implements HttpListener, 
                 if(res.equals("true")){
                     Toast.makeText(mView, "设置成功!", Toast.LENGTH_LONG).show();
                 }else {
-
                     Toast.makeText(mView, "设置失败!", Toast.LENGTH_LONG).show();
                 }
 

@@ -319,11 +319,19 @@ public List<Goods> goodses;
         goodsNames = new String[]{"", "", "",""};
         if (OkHttpUtils.hashkNewwork()) {
             if (AppUtils.isEmpty(sceneAllAttrs.getJSONObject(mView.current).getInteger(Constance.goods_id))) {
+                if(mView.current!=0){
+                    goodsIds[titlePos] = 999;
+                }else {
                 goodsIds[titlePos] = 0;
+                }
             } else {
                 int index = sceneAllAttrs.getJSONObject(mView.current).getInteger(Constance.goods_id);
                 if (index == 0) {
+                    if(mView.current!=0){
+                        goodsIds[titlePos] = 999;
+                    }else {
                     goodsIds[titlePos] = 0;
+                    }
                 } else {
                     goodsIds[titlePos] = index;
                 }
@@ -335,13 +343,21 @@ public List<Goods> goodses;
             if(sceneAllAttrs!=null&&sceneAllAttrs.getJSONObject(mView.current)!=null){
             if (AppUtils.isEmpty(sceneAllAttrs.getJSONObject(mView.current).getInteger(Constance.goods_id))) {
                 goodsNames[titlePos] = "";
+                if(mView.current!=0){
+                    goodsIds[titlePos] = 999;
+                }else {
                 goodsIds[titlePos] = 0;
+                }
             } else {
                 String indexValue = sceneAllAttrs.getJSONObject(mView.current).getString(Constance.attr_value);
                 goodsNames[titlePos] = indexValue;
                 int index = sceneAllAttrs.getJSONObject(mView.current).getInteger(Constance.goods_id);
                 if (index == 0) {
+                    if(mView.current!=0){
+                        goodsIds[titlePos] = 999;
+                    }else {
                     goodsIds[titlePos] = 0;
+                    }
                 } else {
                     goodsIds[titlePos] = index;
                 }

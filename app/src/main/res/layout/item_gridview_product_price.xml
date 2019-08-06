@@ -5,15 +5,15 @@
     android:background="#FFFFFF">
     <RelativeLayout
         android:id="@+id/imageViewRl"
-        android:layout_width="240dp"
+        android:layout_width="@dimen/x120"
         android:layout_height="wrap_content"
         android:background="@color/black"
         >
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="240dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/x120"
             android:layout_centerHorizontal="true"
             android:background="@color/black"
             android:src="@drawable/bg_default"
