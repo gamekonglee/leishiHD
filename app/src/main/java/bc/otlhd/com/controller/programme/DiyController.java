@@ -2393,7 +2393,17 @@ public class DiyController extends BaseController implements INetworkCallBack, P
                         ImageLoader.getInstance().displayImage(imageURL, holder.imageView);
                     }
                     holder.tv_name.setText(mGoodsList.get(position).getName());
-                    holder.tv_price.setText("¥"+mGoodsList.get(position).getShop_price());
+
+
+                    String goods_id=mGoodsList.get(position).getId()+"";
+                    try {
+                        float setPrice = mPriceDao.getProductPrice(goods_id + "").getShop_price();
+                        holder.tv_price.setText("¥"+(setPrice == 0 ? "￥" + (int)mGoodsList.get(position).getShop_price(): "￥" + (int)setPrice));
+                    }catch (Exception e){
+                        holder.tv_price.setText("¥"+mGoodsList.get(position).getShop_price());
+                    }
+
+
                     holder.iv_cart.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -2413,7 +2423,15 @@ public class DiyController extends BaseController implements INetworkCallBack, P
                     }
 
                     holder.tv_name.setText(goodses.getJSONObject(position).getString(Constance.name));
-                    holder.tv_price.setText("¥"+goodses.getJSONObject(position).getString(Constance.shop_price));
+
+                    String goods_id=goodses.getJSONObject(position).getString(Constance.id);
+                    try {
+                        float setPrice = mPriceDao.getProductPrice(goods_id + "").getShop_price();
+                        holder.tv_price.setText("¥"+(setPrice == 0 ? "￥" + (int)Float.parseFloat(goodses.getJSONObject(position).getString(Constance.shop_price)): "￥" + (int)setPrice));
+                    }catch (Exception e){
+                        holder.tv_price.setText("¥"+goodses.getJSONObject(position).getString(Constance.shop_price));
+                    }
+
                     holder.iv_cart.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
